@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [](https://your-solution-url.com)
+- Solution URL: [](https://www.frontendmentor.io/challenges/order-summary-component-QlPmajDUj/hub)
 - Live Site URL: [](https://order-summary-by-vrlclk.netlify.app/)
 
 ## My process
