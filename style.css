@@ -1,0 +1,185 @@
+:root{
+    /* Colors */
+    --clr-primary-pale-blue: hsl(225, 100%, 94%);
+    --clr-primary-bright-blue: hsl(245, 75%, 52%);
+
+    --clr-neutral-very-pale-blue: hsl(225, 100%, 98%);
+    --clr-neutral-desaturated-blue: hsl(224, 23%, 55%);
+    --clr-neutral-dark-blue: hsl(223, 47%, 23%);
+
+    /* Typography */
+    --fs-small: 0.8rem;    /* 8px */
+    --fs-standard: 1rem;    /* 1rem = 16px */
+
+    --ff-standard: 'Red Hat Display', sans-serif;
+
+    --fw-500: 500;
+    --fw-700: 700;
+    --fw-900: 900;
+}
+
+/* General styling */
+body{
+    font-family: var(--ff-standard);
+    font-size: var(--fs-standard);
+
+    /* Background styling */
+    background-color: var(--clr-primary-pale-blue);
+    background-image: url(images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+
+    /* Center positioning */
+    display: grid;
+    place-items: center;
+}
+
+/* Uses background image for desktop */
+@media (min-width: 800px){
+    body{
+        background-image: url(images/pattern-background-desktop.svg);
+        background-position: 0 -3rem;
+    }
+}
+
+/* Card */
+.card__container{
+    background-color: white;
+    max-width: 357px;
+    text-align: center;
+    border-radius: 1.5rem;
+    margin: 1.5rem;
+    box-shadow: 0 4px 10px -5px var(--clr-neutral-desaturated-blue);
+}
+
+@media (min-width: 800px){
+    .card__container{
+        max-width: 450px;
+    }
+}
+
+/* Image container */
+.card__image{
+    /* TL | TR | BR | BL */
+    border-radius: 1.5rem 1.5rem 0 0;
+}
+
+/* Text container */
+.card__text-container{
+    padding: 0 1.5rem;
+}
+
+@media (min-width: 800px){
+    .card__text-container{
+        padding: 0 3rem;
+    }
+}
+
+/* Order summary + description */
+.card__summary-container{
+    padding: 2rem 1rem;
+}
+
+.card__summary-heading{
+    color: var(--clr-neutral-dark-blue);
+    font-weight: var(--fw-900);
+    font-size: 1.75rem;
+    padding-bottom: 1rem;
+}
+
+.card__summary-description{
+    color: var(--clr-neutral-desaturated-blue);
+    font-weight: var(--fw-500);
+    line-height: 1.8;
+}
+
+/* Plan option container */
+.card__option-container{
+    background-color: var(--clr-neutral-very-pale-blue);
+    border-radius: 1rem;
+    padding: 1rem;
+    
+    /* Positioning */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: var(--fs-small);
+}
+
+.card__option{
+    text-align: left;
+    flex: 2;
+    margin-left: 1rem;
+    line-height: 1.8;
+}
+
+.card__option-plan{
+    color: var(--clr-neutral-dark-blue);
+    font-weight: var(--fw-900);
+}
+
+.card__option-price{
+    color: var(--clr-neutral-desaturated-blue);
+    font-weight: var(--fw-500);
+}
+
+.card__option-change{
+    color: var(--clr-primary-bright-blue);
+    font-weight: var(--fw-700);
+}
+
+.card__option-change:is(:hover, :focus){
+    color: var(--clr-neutral-desaturated-blue);
+    text-decoration: none;
+}
+
+/* Buttons */
+.card__button-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem 0;
+}
+
+.card__button-payment{
+    padding: 0.75rem 0;
+    background-color: var(--clr-primary-bright-blue);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: var(--fw-700);
+    letter-spacing: 0.0125rem;
+    box-shadow: 0 20px 15px var(--clr-primary-pale-blue);
+}
+
+.card__button-payment:is(:hover, :focus){
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.card__button-cancel{
+    padding: 0.75rem 0;
+    background: none;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: var(--fw-900);
+    color: var(--clr-neutral-desaturated-blue);
+}
+
+.card__button-cancel:is(:hover, :focus){
+    cursor: pointer;
+    color: var(--clr-neutral-dark-blue);
+}
+
+/* Footer - Attribution */
+.attribution {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 1rem;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}

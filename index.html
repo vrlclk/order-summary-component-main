@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Order summary card</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
+
+  <!-- My CSS -->
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card__container">
+    <div class="card__image-container">
+      <img class="card__image" src="images/illustration-hero.svg" alt="An illustration of a young girl wearing headphones, dancing outside while listening to music wih her audio playback device">
+    </div>
+
+    <div class="card__text-container">
+      <div class="card__summary-container">
+        <h1 class="card__summary-heading">Order Summary</h1>
+        <p class="card__summary-description">You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
+      </div>
+
+      <div class="card__option-container"> <!-- use flex -->
+        <img src="images/icon-music.svg" alt="">
+        <div class="card__option">
+          <h3 class="card__option-plan">Annual Plan</h3>
+          <p class="card__option-price">$59.99/year</p>
+        </div>
+        <a class="card__option-change" href="#" tabindex="0">Change</a>
+      </div>
+    
+      <div class="card__button-container">
+        <button class="card__button-payment" tabindex="0">Proceed to Payment</button>
+        <button class="card__button-cancel" tabindex="0">Cancel Order</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="attribution">
+    <p>Challenge by <a href="https://www.frontendmentor.io/challenges/order-summary-component-QlPmajDUj" target="_blank">Frontend Mentor</a></p>
+    <p>Coded by <a href="https://www.frontendmentor.io/profile/vrlclk" target="_blank">vrlclk</a></p>
+  </div>
+</body>
+</html>
